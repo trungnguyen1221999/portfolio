@@ -28,7 +28,7 @@ const Navbar = ({ hidden = false }) => {
         >
           <a
             href="#home"
-            className="text-2xl md:text-3xl font-bold text-white p-1 md:bg-transparent"
+            className="text-2xl font-bold text-white p-1 md:bg-transparent"
           >
             &lt;KAI NGUYEN/&gt;
           </a>
@@ -46,7 +46,7 @@ const Navbar = ({ hidden = false }) => {
           <li>
             <a
               href="#about"
-              className="text-lg font-medium text-white hover:text-violet-400 transition-colors"
+              className="text-md font-medium text-white hover:text-violet-400 transition-colors"
             >
               About
             </a>
@@ -54,7 +54,7 @@ const Navbar = ({ hidden = false }) => {
           <li>
             <a
               href="#project"
-              className="text-lg font-medium text-white hover:text-violet-400 transition-colors"
+              className="text-md font-medium text-white hover:text-violet-400 transition-colors"
             >
               Project
             </a>
@@ -62,7 +62,7 @@ const Navbar = ({ hidden = false }) => {
           <li>
             <a
               href="#contact"
-              className="text-lg font-medium text-white hover:text-violet-400 transition-colors"
+              className="text-md font-medium text-white hover:text-violet-400 transition-colors"
             >
               Contact
             </a>

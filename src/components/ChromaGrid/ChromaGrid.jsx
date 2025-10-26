@@ -109,10 +109,9 @@ export const ChromaGrid = ({
       ))}
 
       {/* Overlay & Fade */}
-      <div className="chroma-overlay fixed inset-0 z-40 bg-black/60 md:bg-transparent" />
       <div
         ref={fadeRef}
-        className="chroma-fade fixed inset-0 z-50 pointer-events-none"
+        className="chroma-fade hidden md:block md:fixed inset-0 z-50 pointer-events-none"
       />
     </div>
   );
