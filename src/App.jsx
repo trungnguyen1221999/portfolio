@@ -249,7 +249,7 @@ function App() {
         <div className="h-20 md:h-10"></div>
 
         {/* 🌐 Social */}
-        <div className="fixed right-2 bottom-6 md:right-10 z-50 flex flex-col gap-2 scale-75 md:scale-100">
+        <div className="fixed right-2 bottom-40 md:right-10 z-50 flex flex-col gap-2 animate-bounce md:scale-130">
           <a
             href="https://github.com/trungnguyen1221999"
             target="_blank"
