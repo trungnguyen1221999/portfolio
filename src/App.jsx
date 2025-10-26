@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
 import ShinyText from "./components/ShinyText/ShinyText";
 import BlurText from "./components/BlurText/BlurText";
+import Contact from "./components/Contact/Contaxt"
 import {
   programmingLanguages,
   frontEnd,
@@ -354,84 +355,7 @@ I understand the full eCommerce journey — from product setup and supplier mana
         <Business />
 
         {/* 📬 Phần liên hệ */}
-        <div className="kontak mt-32 sm:p-10 p-0" id="contact" z-10>
-          <h1 className="text-4xl mb-2 font-bold text-center">Contact</h1>
-          <p className="text-base/loose text-center mb-10 opacity-50">
-            Get in touch with me
-          </p>
-
-          {/* Bố cục hai cột */}
-          <div className="flex flex-col md:flex-row gap-8">
-            {/* Form liên hệ */}
-            <div className="flex-1">
-              <form
-                action="https://formsubmit.co/trungnguyen1221999@gmail.com"
-                method="POST"
-                className="bg-zinc-800 p-10 w-full rounded-md"
-                autoComplete="off"
-              >
-                <div className="flex flex-col gap-6">
-                  <div className="flex flex-col gap-2">
-                    <label className="font-semibold" htmlFor="name">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Input Name..."
-                      className="border border-zinc-500 p-2 rounded-md bg-zinc-900 text-white"
-                      required
-                    />
-                  </div>
-
-                  <div className="flex flex-col gap-2">
-                    <label className="font-semibold" htmlFor="email">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="Input Email..."
-                      className="border border-zinc-500 p-2 rounded-md bg-zinc-900 text-white"
-                      required
-                    />
-                  </div>
-
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="message" className="font-semibold">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      cols="45"
-                      rows="7"
-                      placeholder="Message..."
-                      className="border border-zinc-500 p-2 rounded-md bg-zinc-900 text-white"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div className="text-center">
-                    <button
-                      type="submit"
-                      className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full w-full cursor-pointer border border-gray-700 hover:bg-[#222] transition-colors"
-                    >
-                      <ShinyText
-                        text="Send"
-                        disabled={false}
-                        speed={3}
-                        className="custom-class"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+      <Contact/>
 
         {/* Biểu tượng mạng xã hội - fixed bên phải, dưới 1/3 màn hình */}
         <div className="fixed right-4 md:right-10 top-[66vh] z-50 flex flex-col gap-3 scale-50 animate-bounce">
