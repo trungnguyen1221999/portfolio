@@ -4,20 +4,11 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ShinyText from "../ShinyText/ShinyText";
 
-// 🧩 Schema validation với Zod
+// 🧩 Schema validation với Zod 
 const formSchema = z.object({
-  name: z
-    .string()
-    .nonempty("Please enter your name")
-    .min(2, "Name is too short"),
-  email: z
-    .string()
-    .nonempty("Please enter your email")
-    .email("Invalid email address"),
-  message: z
-    .string()
-    .nonempty("Please enter a message")
-    .min(5, "Message is too short"),
+  name: z.string().nonempty("Hey, don’t be shy — what’s your name?").min(2, "Your name’s too short to be real"),
+  email: z.string().nonempty("I can’t reach you if you don’t drop your email!").email("That doesn’t look like a real email"),
+  message: z.string().nonempty("You forgot to say something").min(5, "A few more words won’t hurt — type a bit more!"),
 });
 
 const Contaxt = () => {
@@ -32,30 +23,29 @@ const Contaxt = () => {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data) => {
-    // ✅ Hiện popup
-    setPopup(data);
+  const onSubmit = async (data) => {
+    try {
+      // ✅ Hiện popup
+      setPopup(data);
 
-    // ✅ Reset form
-    reset();
+      // ✅ Reset form
+      reset();
 
-    // ✅ Gửi trực tiếp qua FormSubmit
-    const form = document.createElement("form");
-    form.action = "https://formsubmit.co/trungnguyen1221999@gmail.com";
-    form.method = "POST";
-    form.target = "_blank";
-
-    Object.keys(data).forEach((key) => {
-      const input = document.createElement("input");
-      input.type = "hidden";
-      input.name = key;
-      input.value = data[key];
-      form.appendChild(input);
-    });
-
-    document.body.appendChild(form);
-    form.submit();
-    document.body.removeChild(form);
+      // ✅ Gửi dữ liệu qua FormSubmit bằng fetch (không redirect)
+      await fetch("https://formsubmit.co/ajax/trungnguyen1221999@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...data,
+          _captcha: "false", // Tắt captcha để gửi
+        }),
+      });
+    } catch (err) {
+      console.error("Error sending email:", err);
+    }
   };
 
   const handleOutsideClick = (e) => {
@@ -159,7 +149,7 @@ const Contaxt = () => {
               <p><strong>Name:</strong> {popup.name}</p>
               <p><strong>Email:</strong> {popup.email}</p>
               <p><strong>Message:</strong> {popup.message}</p>
-              <p className="opacity-70">Thanks {popup.name}, I’ll get back to you soon 💌</p>
+              <p className="opacity-70 pt-10">Thanks {popup.name}, I’ll get back to you soon 💌</p>
             </div>
             <div className="text-center">
               <button
