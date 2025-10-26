@@ -146,11 +146,11 @@ function App() {
         </div>
         {/* 🧍‍♂️ Phần "About Me" */}
         <div
-          className="z-50 mt-35 mx-auto w-full max-w-[1600px] rounded-3xl border-[5px] border-violet-500/40 shadow-[0_0_30px_rgba(168,85,247,0.4)] bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#1a1a1a] p-6"
+          className="z-1 mt-35 mx-auto w-full max-w-[1600px] rounded-3xl border-[5px] border-violet-500/40 shadow-[0_0_30px_rgba(168,85,247,0.4)] bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#1a1a1a] p-6"
           id="about"
         >
           <div
-            className="flex flex-col md:flex-row-reverse items-center justify-between gap-10 py-20 px-8"
+            className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10 py-20 px-8"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-once="true"
