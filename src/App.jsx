@@ -80,7 +80,7 @@ function App() {
         <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
           <div className=" animate__animated animate__fadeInUp animate__delay-3s">
             <div className="flex items-center gap-3 mb-6 bg bg-zinc-800 w-fit p-4 rounded-2xl">
-              <img src="./assets/faris1.png" className="w-10 rounded-md" />
+              <img src="./assets/Kai2.png" className="w-10 rounded-md" />
               <q>FULL STACK DEVELOPER</q>
             </div>
             <h1 className="text-5xl font-bold mb-6">
@@ -129,14 +129,14 @@ function App() {
           </div>
 
           {/* Thẻ hồ sơ bên phải */}
-          <div className="mx-auto md:ml-auto animate__animated animate__fadeInUp animate__delay-4s md:mr-0">
+          <div className="mx-auto md:ml-auto animate__animated animate__fadeInUp animate__delay-4s md:mr-0 scale-90">
             <ProfileCard
               name="Kai Nguyen"
               title="Web Developer"
               status="Online"
               handle=""
               contactText="Contact Me"
-              avatarUrl="./assets/faris.png"
+              avatarUrl="./assets/Kai.png"
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}
@@ -145,17 +145,17 @@ function App() {
         </div>
         {/* 🧍‍♂️ Phần "About Me" */}
         <div
-          className="z-50 mt-15 mx-auto w-full max-w-[1600px] rounded-3xl border-[5px] border-violet-500/40 shadow-[0_0_30px_rgba(168,85,247,0.4)] bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#1a1a1a] p-6"
+          className="z-50 mt-35 mx-auto w-full max-w-[1600px] rounded-3xl border-[5px] border-violet-500/40 shadow-[0_0_30px_rgba(168,85,247,0.4)] bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#1a1a1a] p-6"
           id="about"
         >
           <div
-            className="flex flex-col md:flex-row items-center justify-between gap-10 pt-0 px-8"
+            className="flex flex-col md:flex-row-reverse items-center justify-between gap-10 py-20 px-8"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-once="true"
           >
             {/* Cột trái: thông tin cá nhân */}
-            <div className="basis-full md:basis-8/12 pr-0 md:pr-8 border-b md:border-b-0 md:border-r border-violet-500/30">
+            <div className="basis-full md:basis-8/12 pr-0 md:pl-8 border-b md:border-b-0 md:border-l border-violet-500/30">
               <div className="flex-1 text-left">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
                   About Me
@@ -206,6 +206,11 @@ I understand the full eCommerce journey — from product setup and supplier mana
 
             {/* Cột phải: hiển thị Lanyard 3D */}
             <div className="basis-full md:basis-4/12 pl-0 md:pl-8 overflow-hidden max-w-full flex justify-center ">
+              <img
+                src="./assets/Kai3.jpg"
+                alt=""
+                className="rounded-3xl border-[2px] border-cyan-500/40 shadow-md"
+              />
             </div>
           </div>
         </div>
@@ -436,7 +441,7 @@ I understand the full eCommerce journey — from product setup and supplier mana
             rel="noopener noreferrer"
             className="text-white hover:text-violet-500 transition-colors"
           >
-            <i  className="ri-github-fill ri-6x"></i>
+            <i className="ri-github-fill ri-6x"></i>
           </a>
         </div>
       </main>
