@@ -30,7 +30,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="mt-32 pb-8 flex flex-col items-center relative z-10">
+    <div className="md:mt-32 pb-8 flex flex-col items-center relative z-10">
       {/* Khung chứa linh hoạt (responsive) */}
       <div className="w-full flex justify-center items-center gap-6">
        

@@ -54,7 +54,7 @@ const Contaxt = () => {
 
   return (
     <div className="kontak mt-32 sm:p-10 p-0 z-10 relative" id="contact">
-      <h1 className="text-4xl mb-2 font-bold text-center">Contact</h1>
+      <h1 className="text-xl md:text-3xl mb-2 font-bold text-center">Contact</h1>
       <p className="text-base/loose text-center mb-10 opacity-50">
         Get in touch with me
       </p>
@@ -63,7 +63,7 @@ const Contaxt = () => {
         <div className="flex-1">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="bg-zinc-800 p-10 w-full rounded-md"
+            className="bg-zinc-800 p-4 md:p-10 w-full rounded-md"
           >
             {/* Name */}
             <div className="flex flex-col gap-2 mb-4">
