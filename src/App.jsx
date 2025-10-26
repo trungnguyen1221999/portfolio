@@ -206,7 +206,7 @@ I understand the full eCommerce journey — from product setup and supplier mana
             </div>
 
             {/* Cột phải: hiển thị Lanyard 3D */}
-            <div className="basis-full md:basis-4/12 pl-0 md:pl-8 overflow-hidden max-w-full flex justify-center ">
+            <div className="basis-full md:basis-4/12 pl-0 md:pl-8 overflow-hidden max-w-full flex justify-center min-w[300px]">
               <img
                 src="./assets/Kai3.jpg"
                 alt=""
