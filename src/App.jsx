@@ -154,10 +154,12 @@ function App() {
                   <p className="text-sm">of Learning Coding</p>
                 </div>
                 <div>
-                  <h1 className="text-xl md:text-2xl mb-1">
+                  <h1 className="text-xl md:text-2xl mb-1 ">
                     5<span className="text-violet-500">+ Years</span>
                   </h1>
-                  <p className="text-sm">of Experience in eCommerce</p>
+                  <p className="text-sm pb-6 md:pb-0">
+                    of Experience in eCommerce
+                  </p>
                 </div>
               </div>
             </div>
