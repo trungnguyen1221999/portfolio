@@ -130,7 +130,7 @@ function App() {
           </div>
 
           {/* Thẻ hồ sơ bên phải */}
-          <div className="mx-auto md:ml-auto animate__animated animate__fadeInUp animate__delay-4s md:mr-0 scale-90">
+          <div className="mx-auto md:ml-auto animate__animated animate__fadeInUp animate__delay-4s md:mr-0 scale-90 md:scale-80 lg:scale-90">
             <ProfileCard
               name="Kai Nguyen"
               title="Web Developer"
