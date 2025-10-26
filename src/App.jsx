@@ -64,58 +64,66 @@ function App() {
         />
       </div>
 
-      <main className="mt-6 md:mt-0 max-w-6xl mx-auto px-3 sm:px-4 z-10 overflow-x-hidden">
+      <main className="mt-20 md:mt-0 max-w-6xl mx-auto px-3 sm:px-4 z-10 overflow-x-hidden">
         {/* 🧑‍💻 Hero */}
-        <div className="hero grid md:grid-cols-2 items-center pt-6 md:pt-10 gap-6">
-          <div className="animate__animated animate__fadeInUp animate__delay-3s">
-            <div className="flex items-center gap-3 mb-4 bg-zinc-800 w-fit p-2 sm:p-3 rounded-xl">
-              <img src="./assets/Kai2.png" className="w-8 rounded-md" />
-              <q className="text-xs sm:text-sm">FULL STACK DEVELOPER</q>
-            </div>
+      <div className="hero grid md:grid-cols-2 items-center pt-6 md:pt-10 gap-6 mt-10 md:mt-0">
+  {/* Hero text */}
+  <div className="animate__animated animate__fadeInUp animate__delay-3s flex flex-col space-y-5">
+    
+    {/* Chức danh */}
+    <div className="flex items-center gap-3 bg-zinc-800 w-fit p-2 sm:p-3 rounded-xl">
+      <img src="./assets/Kai2.png" className="w-8 rounded-md" />
+      <q className="">FULL STACK DEVELOPER</q>
+    </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold mb-3">
-              <ShinyText text="Hi I'm KAI" disabled={false} speed={3} />
-            </h1>
+    {/* Tiêu đề chính */}
+    <h1 className="text-3xl sm:text-4xl font-bold">
+      <ShinyText text="Hi I'm KAI" disabled={false} speed={3} />
+    </h1>
 
-            <BlurText
-              text="I feel at home where technology meets business — blending creativity, code, and commerce to build meaningful e-commerce experiences."
-              delay={150}
-              animateBy="words"
-              direction="top"
-              className="mb-5 text-xs sm:text-sm"
-            />
+    {/* Mô tả */}
+    <BlurText
+      text="I feel at home where technology meets business — blending creativity, code, and commerce to build meaningful e-commerce experiences."
+      delay={150}
+      animateBy="words"
+      direction="top"
+      className="sm:text-sm md:text-base leading-relaxed"
+    />
 
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
-              <a
-                href="./assets/CV.pdf"
-                download="Kai_Nguyen_CV.pdf"
-                className="font-semibold bg-[#1a1a1a] py-2 px-4 text-xs sm:text-sm rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
-              >
-                <ShinyText text="Download CV" disabled={false} speed={3} />
-              </a>
+    {/* Nút hành động */}
+    <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
+      <a
+        href="./assets/CV.pdf"
+        download="Kai_Nguyen_CV.pdf"
+        className="font-semibold bg-[#1a1a1a] py-2 px-4 sm:text-sm md:text-base rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
+      >
+        <ShinyText text="Download CV" disabled={false} speed={3} />
+      </a>
 
-              <a
-                href="#project"
-                className="font-semibold bg-[#1a1a1a] py-2 px-4 text-xs sm:text-sm rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
-              >
-                <ShinyText text="Explore Projects" disabled={false} speed={3} />
-              </a>
-            </div>
-          </div>
+      <a
+        href="#project"
+        className="font-semibold bg-[#1a1a1a] py-2 px-4 sm:text-sm md:text-base rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
+      >
+        <ShinyText text="Explore Projects" disabled={false} speed={3} />
+      </a>
+    </div>
+  </div>
 
-          <div className="mx-auto md:ml-auto animate__animated animate__fadeInUp animate__delay-4s scale-90 md:scale-75 lg:scale-85">
-            <ProfileCard
-              name="Kai Nguyen"
-              title="Web Developer"
-              status="Online"
-              contactText="Contact Me"
-              avatarUrl="./assets/Kai.png"
-              showUserInfo={true}
-              enableTilt={true}
-              enableMobileTilt={false}
-            />
-          </div>
-        </div>
+  {/* Profile card */}
+  <div className="mx-auto md:ml-auto animate__animated animate__fadeInUp animate__delay-4s scale-90 md:scale-75 lg:scale-85">
+    <ProfileCard
+      name="Kai Nguyen"
+      title="Web Developer"
+      status="Online"
+      contactText="Contact Me"
+      avatarUrl="./assets/Kai.png"
+      showUserInfo={true}
+      enableTilt={true}
+      enableMobileTilt={false}
+    />
+  </div>
+</div>
+
 
         {/* 🧍 About */}
         <div
