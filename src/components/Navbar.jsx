@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import GooeyNav from "./GooeyNav/GooeyNav";
 
 const Navbar = ({ hidden = false }) => {
   if (hidden) return null;
@@ -14,10 +15,17 @@ const Navbar = ({ hidden = false }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Menu items desktop (không có Home, logo sẽ là Home)
+  const desktopItems = [
+    { label: "About", href: "#about" },
+    { label: "Project", href: "#project" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
     <nav className="fixed top-0 left-0 w-full transition-all duration-300 z-50">
       <div className="relative py-5 w-full flex items-center justify-between px-6 md:px-12">
-        {/* Logo */}
+        {/* Logo (Home) */}
         <div
           className={`flex items-center cursor-pointer 
             bg-white/10 backdrop-blur-md p-1 rounded-br-2xl rounded-bl-2xl 
@@ -28,46 +36,25 @@ const Navbar = ({ hidden = false }) => {
         >
           <a
             href="#home"
-            className="text-2xl font-bold text-white p-1 md:bg-transparent"
+            className="text-xl sm:text-2xl font-bold text-white p-1 md:bg-transparent"
           >
             &lt;KAI NGUYEN/&gt;
           </a>
         </div>
 
-        {/* Menu desktop */}
-        <ul
-          className={`hidden md:flex items-center gap-10 
-            bg-white/10 backdrop-blur-md p-4 rounded-br-2xl rounded-bl-2xl 
-            transition-all duration-500
-            ${
-              active ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-            }`}
-        >
-          <li>
-            <a
-              href="#about"
-              className="text-md font-medium text-white hover:text-violet-400 transition-colors"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#project"
-              className="text-md font-medium text-white hover:text-violet-400 transition-colors"
-            >
-              Project
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              className="text-md font-medium text-white hover:text-violet-400 transition-colors"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
+        {/* Desktop GooeyNav */}
+        <div className="hidden md:block transition-all duration-500">
+          <GooeyNav
+            items={desktopItems}
+            particleCount={15}
+            particleDistances={[90, 10]}
+            particleR={100}
+            initialActiveIndex={0}
+            animationTime={600}
+            timeVariance={300}
+            colors={[1, 2, 3, 1, 2, 3, 1, 4]}
+          />
+        </div>
 
         {/* Hamburger icon (mobile) */}
         <button
@@ -80,27 +67,16 @@ const Navbar = ({ hidden = false }) => {
         {/* Overlay menu (mobile) */}
         {menuOpen && (
           <div className="fixed inset-0 bg-black/90 backdrop-blur-md flex flex-col items-center justify-center gap-10 text-white text-2xl font-semibold z-50 animate-fadeIn">
-            <a
-              href="#about"
-              onClick={() => setMenuOpen(false)}
-              className="hover:text-violet-400 transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#project"
-              onClick={() => setMenuOpen(false)}
-              className="hover:text-violet-400 transition-colors"
-            >
-              Project
-            </a>
-            <a
-              href="#contact"
-              onClick={() => setMenuOpen(false)}
-              className="hover:text-violet-400 transition-colors"
-            >
-              Contact
-            </a>
+            {desktopItems.map((item, idx) => (
+              <a
+                key={idx}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className="hover:scale-150 transition-all"
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
         )}
       </div>

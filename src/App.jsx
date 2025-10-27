@@ -111,7 +111,7 @@ function App() {
           </div>
 
           {/* Profile card */}
-          <div className="mx-auto md:ml-auto animate__animated animate__fadeInUp animate__delay-4s scale-90 md:scale-75 lg:scale-85">
+          <div className="mx-auto md:mr-0 animate__animated animate__fadeInUp animate__delay-4s scale-90 md:scale-75 lg:scale-85">
             <ProfileCard
               name="Kai Nguyen"
               title="Web Developer"
@@ -126,7 +126,11 @@ function App() {
         </div>
 
         {/* 🙋‍♂️ About Me */}
-        <div ref={aboutRef} className="z-1 mt-16 mx-auto w-full max-w-[1400px]">
+        <div
+          ref={aboutRef}
+          id="about"
+          className="z-1 mt-16 mx-auto w-full max-w-[1400px]"
+        >
           <ElectricBorder
             color="#7df9ff"
             speed={1}
@@ -224,35 +228,25 @@ function App() {
         </div>
 
         {/* 💼 Projects */}
-        <div className="proyek mt-16 py-6" id="project">
-          <ElectricBorder
-            color="#9f44ee" // gradient base color
-            speed={1.2} // tốc độ animation
-            chaos={0.7} // mức "rối"
-            thickness={2} // độ dày border
-            style={{
-              borderRadius: 20,
-            }}
-          >
-            <div className="p-6 sm:p-8 rounded-2xl">
-              <h1 className="text-center text-2xl sm:text-3xl font-bold mb-2 text-white">
-                Projects
-              </h1>
-              <p className="text-center text-xs sm:text-sm opacity-60 md:mb-6 -mb-6 text-gray-200">
-                A selection of works showcasing my development journey.
-              </p>
-              <div className="scale-90 sm:scale-100">
-                <ChromaGrid
-                  items={listProyek}
-                  onItemClick={handleProjectClick}
-                  radius={400}
-                  damping={0.45}
-                  fadeOut={0.6}
-                  ease="power3.out"
-                />
-              </div>
+        <div className="proyek mt-16" id="project">
+          <div className="p-6 sm:p-8 rounded-2xl">
+            <h1 className="text-center text-2xl sm:text-3xl font-bold mb-2 text-white">
+              Projects
+            </h1>
+            <p className="text-center text-xs sm:text-sm opacity-60 md:mb-6 -mb-6 text-gray-200">
+              A selection of works showcasing my development journey.
+            </p>
+            <div className="scale-90 sm:scale-100">
+              <ChromaGrid
+                items={listProyek}
+                onItemClick={handleProjectClick}
+                radius={400}
+                damping={0.45}
+                fadeOut={0.6}
+                ease="power3.out"
+              />
             </div>
-          </ElectricBorder>
+          </div>
         </div>
 
         {/* 🏢 Business */}
