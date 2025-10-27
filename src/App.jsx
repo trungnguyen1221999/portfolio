@@ -95,14 +95,14 @@ function App() {
       <a
         href="./assets/CV.pdf"
         download="Kai_Nguyen_CV.pdf"
-        className="font-semibold bg-[#1a1a1a] py-2 px-4 sm:text-xs md:text-base rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
+        className="font-semibold bg-[#1a1a1a] py-2 px-4 text-xs sm:text-base rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
       >
         <ShinyText text="Download CV" disabled={false} speed={3} />
       </a>
 
       <a
         href="#project"
-        className="font-semibold bg-[#1a1a1a] py-2 px-4 sm:text-xs md:text-base rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
+        className="font-semibold bg-[#1a1a1a] py-2 px-4 text-xs sm:text-base rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
       >
         <ShinyText text="Explore Projects" disabled={false} speed={3} />
       </a>

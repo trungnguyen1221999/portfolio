@@ -59,7 +59,7 @@ const Business = () => {
             data-aos="fade-up"
             src={phone}
             alt="Mobile view"
-            className="w-full h-[80vh] object-cover rounded-none cursor-pointer hover:scale-105 transition-transform duration-300"
+            className="w-full h-[70vh] sm:h-[80vh] object-cover rounded-none cursor-pointer hover:scale-105 transition-transform duration-300"
             onClick={() => handleOpen(phone)}
           />
         </div>
@@ -81,7 +81,7 @@ const Business = () => {
             <img
               src={currentImage}
               alt="OmaCustom.fi"
-              className="w-full h-[60vh] md:h-56 object-cover md:rounded-t-2xl"
+              className="w-full h-[50vh] sm:h-60 object-cover md:rounded-t-2xl"
             />
 
             {/* Content */}
