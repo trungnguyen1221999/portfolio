@@ -125,62 +125,7 @@ function App() {
           </div>
         </div>
 
-        {/* 🧍 About */}
-        {/* <div
-          ref={aboutRef}
-          id="about"
-          className="z-1 mt-16 mx-auto w-full max-w-[1400px] rounded-2xl border-[2px] md:border-[3px] border-violet-500/40 shadow-[0_0_15px_rgba(168,85,247,0.2)] bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#1a1a1a] p-4 sm:p-6"
-        >
-          <div
-            className="flex flex-col lg:flex-row-reverse items-center justify-between gap-6 md:gap-8 py-6"
-            data-aos="fade-up"
-          >
-            <div className="basis-full md:basis-8/12 pr-0 md:pl-6 border-b md:border-b-0 md:border-l border-violet-500/30">
-              <h2 className="text-xl sm:text-3xl font-bold mb-3 text-white">
-                About Me
-              </h2>
-
-              <BlurText
-                text="My name is Trung Nguyen, but you can call me Kai. I’m a web developer with a background in eCommerce. After years of running online stores, I’ve learned how technology, user experience, and marketing work together to drive real business growth."
-                delay={150}
-                animateBy="words"
-                direction="top"
-                className="text-xs sm:text-base leading-relaxed mb-6 text-gray-300"
-              />
-
-              <div className="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-y-4 sm:gap-y-0 w-full">
-                <div>
-                  <h1 className="text-xl md:text-2xl mb-1">
-                    10<span className="text-violet-500">+ Projects</span>
-                  </h1>
-                  <p className="text-sm">in Web and Game</p>
-                </div>
-                <div>
-                  <h1 className="text-xl md:text-2xl mb-1">
-                    2<span className="text-violet-500">+ Years</span>
-                  </h1>
-                  <p className="text-sm">of Learning Coding</p>
-                </div>
-                <div>
-                  <h1 className="text-xl md:text-2xl mb-1 ">
-                    5<span className="text-violet-500">+ Years</span>
-                  </h1>
-                  <p className="text-sm pb-6 md:pb-0">
-                    of Experience in eCommerce
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="basis-full md:basis-4/12 flex justify-center">
-              <img
-                src="./assets/Kai3.jpg"
-                alt="profile"
-                className="rounded-2xl border border-cyan-500/40 shadow-md max-w-[240px] sm:max-w-[320px]"
-              />
-            </div>
-          </div>
-        </div> */}
+        {/* 🙋‍♂️ About Me */}
         <div ref={aboutRef} className="z-1 mt-16 mx-auto w-full max-w-[1400px]">
           <ElectricBorder
             color="#7df9ff"
@@ -280,22 +225,34 @@ function App() {
 
         {/* 💼 Projects */}
         <div className="proyek mt-16 py-6" id="project">
-          <h1 className="text-center text-2xl sm:text-3xl font-bold mb-2">
-            Projects
-          </h1>
-          <p className="text-center text-xs sm:text-sm opacity-60 md:mb-6 -mb-6">
-            A selection of works showcasing my development journey.
-          </p>
-          <div className="scale-90 sm:scale-100">
-            <ChromaGrid
-              items={listProyek}
-              onItemClick={handleProjectClick}
-              radius={400}
-              damping={0.45}
-              fadeOut={0.6}
-              ease="power3.out"
-            />
-          </div>
+          <ElectricBorder
+            color="#9f44ee" // gradient base color
+            speed={1.2} // tốc độ animation
+            chaos={0.7} // mức "rối"
+            thickness={2} // độ dày border
+            style={{
+              borderRadius: 20,
+            }}
+          >
+            <div className="p-6 sm:p-8 rounded-2xl">
+              <h1 className="text-center text-2xl sm:text-3xl font-bold mb-2 text-white">
+                Projects
+              </h1>
+              <p className="text-center text-xs sm:text-sm opacity-60 md:mb-6 -mb-6 text-gray-200">
+                A selection of works showcasing my development journey.
+              </p>
+              <div className="scale-90 sm:scale-100">
+                <ChromaGrid
+                  items={listProyek}
+                  onItemClick={handleProjectClick}
+                  radius={400}
+                  damping={0.45}
+                  fadeOut={0.6}
+                  ease="power3.out"
+                />
+              </div>
+            </div>
+          </ElectricBorder>
         </div>
 
         {/* 🏢 Business */}
