@@ -17,13 +17,14 @@ const Navbar = ({ hidden = false }) => {
 
   // Menu items desktop (không có Home, logo sẽ là Home)
   const desktopItems = [
+     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Project", href: "#project" },
     { label: "Contact", href: "#contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full transition-all duration-300 z-50">
+    <nav className="fixed top-0 left-0 w-full transition-all duration-300 z-50 ">
       <div className="relative py-5 w-full flex items-center justify-between px-6 md:px-12">
         {/* Logo (Home) */}
         <div

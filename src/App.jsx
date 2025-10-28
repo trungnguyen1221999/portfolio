@@ -66,11 +66,11 @@ function App() {
         />
       </div>
 
-      <main className="mt-20 md:mt-10 max-w-6xl mx-auto px-3 sm:px-4 z-10 overflow-x-hidden">
+      <main className="max-w-6xl mx-auto px-3 sm:px-4 z-10 overflow-x-hidden">
         {/* 🧑‍💻 Hero */}
-        <div className="hero grid md:grid-cols-2 items-center pt-6 md:pt-10 gap-6 mt-10 md:mt-0">
+        <div className="hero  grid md:grid-cols-2 items-center pt-25 gap-6">
           {/* Hero text */}
-          <div className="animate__animated animate__fadeInUp animate__delay-3s flex flex-col space-y-5">
+          <div className=" animate__animated animate__fadeInUp animate__delay-3s flex flex-col space-y-5">
             {/* Chức danh */}
             <div className="flex items-center gap-3 bg-zinc-800 w-fit p-2 sm:p-3 rounded-xl">
               <img src="./assets/Kai2.png" className="w-8 rounded-md" />
