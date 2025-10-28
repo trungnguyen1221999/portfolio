@@ -112,16 +112,26 @@ function App() {
 
           {/* Profile card */}
           <div className="mx-auto md:mr-0 animate__animated animate__fadeInUp animate__delay-4s scale-90 md:scale-75 lg:scale-85">
-            <ProfileCard
-              name="Kai Nguyen"
-              title="Web Developer"
-              status="Online"
-              contactText="Contact Me"
-              avatarUrl="./assets/Kai.png"
-              showUserInfo={true}
-              enableTilt={true}
-              enableMobileTilt={false}
-            />
+           <ElectricBorder
+            color="#0007d7"
+            speed={2}
+            chaos={1}
+            thickness={5}
+            style={{ borderRadius: 16 }}
+           >
+              <ProfileCard
+                name="Kai Nguyen"
+                title="Web Developer"
+                status="Online"
+                contactText="Contact Me"
+                avatarUrl="./assets/Kai.png"
+                showUserInfo={true}
+                showBehindGradient ={true}
+
+                enableTilt={true}
+                enableMobileTilt={5}
+              />
+           </ElectricBorder>
           </div>
         </div>
 
