@@ -66,7 +66,7 @@ function App() {
         />
       </div>
 
-      <main className="mt-20 md:mt-0 max-w-6xl mx-auto px-3 sm:px-4 z-10 overflow-x-hidden">
+      <main className="mt-20 md:mt-10 max-w-6xl mx-auto px-3 sm:px-4 z-10 overflow-x-hidden">
         {/* 🧑‍💻 Hero */}
         <div className="hero grid md:grid-cols-2 items-center pt-6 md:pt-10 gap-6 mt-10 md:mt-0">
           {/* Hero text */}
