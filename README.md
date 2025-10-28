@@ -53,10 +53,3 @@ It showcases my projects, skills, and experience in web development and digital 
 
 This project is **deployed on Netlify**.  
 
-**Steps to deploy yourself:**
-
-1. Clone the repository:
-
-```bash
-git clone <repo-url>
-cd <repo-folder>
