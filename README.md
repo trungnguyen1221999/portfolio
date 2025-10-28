@@ -1,15 +1,18 @@
 # 🌐 Personal Portfolio
 
-A modern personal portfolio website built with **Vite**, **React**, **TailwindCSS**, and **JavaScript**.  
+A modern personal portfolio website built with **Vite**, **React**, **TailwindCSS**, **JavaScript** and **ReactBits** .  
 It showcases my projects, skills, and experience in web development and digital marketing.  
 
 **Live Preview:** [https://kainguyen.netlify.app/](https://kainguyen.netlify.app/)  
 **Deployed via:** Netlify
 <p align="center">
-  <img src="https://i.imgur.com/PCptjMV.png" alt="" width="1000"/>
+  <img src="https://i.imgur.com/2qLKLi8.webp" alt="" width="1000"/>
 </p>
 <p align="center">
-  <img src="https://i.imgur.com/zhoxBfr.webp" alt="" width="1000"/>
+  <img src="https://i.imgur.com/4Qq5QTP.webp" alt="" width="1000"/>
+</p>
+<p align="center">
+  <img src="https://i.imgur.com/5ffEJ8l.png" alt="" width="1000"/>
 </p>
 ---
 
@@ -19,7 +22,7 @@ It showcases my projects, skills, and experience in web development and digital 
 - ⚛️ **React** — component-based UI library  
 - 🎨 **TailwindCSS** — utility-first CSS framework for rapid styling  
 - 🧩 **JavaScript (ES6+)** — main programming language  
-- ✨ **AOS / GSAP** — smooth scroll and animation effects  
+- ✨ **AOS / GSAP / React bits** — smooth scroll and animation effects  
 - 📧 **FormSubmit** — receive emails via contact form without backend  
   *(I plan to implement a backend with MongoDB and Node.js in the future, but currently FormSubmit handles it.)*
 
