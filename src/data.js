@@ -80,8 +80,35 @@ import Proyek3 from "/assets/proyek/proyek3.png";
 import Proyek4 from "/assets/proyek/proyek4.png";
 import Proyek5 from "/assets/proyek/proyek5.png";
 import Proyek6 from "/assets/proyek/proyek6.png";
+import Proyek7 from "/assets/proyek/proyek7.png";
+import Proyek8 from "/assets/proyek/proyek8.png";
+import Proyek9 from "/assets/proyek/proyek9.png";
 
 export const listProyek = [
+  {
+    id: 9,
+    image: Proyek9,
+    title: "Dashboard Panel",
+    subtitle: "frontend project built with Next.js and Shadcn UI",
+    fullDescription:
+      "It demonstrates how to structure a modern web application using React, TypeScript, and a component-based design system. 🚀 Tech Stack: Framework: Next.js, UI Library: Shadcn UI, Language: TypeScript. Styling: Tailwind CSS. Deployment: Vercel. 🧠 Project Purpose: This project was created as a personal learning exercise to understand the fundamentals of Next.js (client components, server components), practice using Shadcn UI for building modern, accessible, and reusable components, implement Light/Dark Mode, and explore component-driven development and responsive design with Tailwind CSS.",
+    borderColor: "#faff00",
+    gradient: "linear-gradient(145deg, #faff00, #000)",
+    url: "https://github.com/trungnguyen1221999/next-js-dashboard",
+    dad: "100",
+  },
+  {
+    id: 8,
+    image: Proyek8,
+    title: "Personal Portfolio",
+    subtitle: "My personal website.",
+    fullDescription:
+      "A modern personal portfolio website built with Vite, React, TailwindCSS, JavaScript and ReactBits. It showcases my projects, skills, and experience in web development and digital marketing.",
+    borderColor: "#00806c",
+    gradient: "linear-gradient(145deg, #00806c, #000)",
+    url: "https://github.com/trungnguyen1221999/portfolio",
+    dad: "100",
+  },
   {
     id: 1,
     image: Proyek1,
@@ -154,6 +181,19 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://github.com/trungnguyen1221999/pikachu--android",
+    dad: "600",
+  },
+  {
+    id: 7,
+    image: Proyek7,
+    title: "Merge Knives",
+    subtitle:
+      "Merge Knives is a game developed exclusively for the Kauhajoki Museum, can play on both Android & Pc",
+    fullDescription:
+      "Players merge knives to create stronger versions and then use their best creation to fight a powerful Boss in the second part of the game. Built with Unity and C#, designed for Android devices. The game has no public download link. It was created exclusively for the Kauhajoki Museum and is available only within the museum exhibition.",
+    borderColor: "#e44b8d",
+    gradient: "linear-gradient(180deg, #e44b8d, #000)",
+    url: "https://github.com/mazinstein/knives-merge",
     dad: "600",
   },
 ];
