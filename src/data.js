@@ -15,7 +15,7 @@ import Cpp from "/assets/tools/cpp.png";
 import ReactJS from "/assets/tools/reactjs.png";
 import StyledComponents from "/assets/tools/styled.png";
 import Tailwind from "/assets/tools/tailwind.png";
-import Tanstack from "/assets/tools/react-query.png";
+import NextJs from "/assets/tools/nextjs.png";
 
 
 import NodeJS from "/assets/tools/nodejs.png";
@@ -47,7 +47,7 @@ export const frontEnd = [
   { id: 1, icon: ReactJS, name: "React JS" },
   { id: 2, icon: StyledComponents, name: "Styled Components" },
   { id: 3, icon: Tailwind, name: "Tailwind CSS" },
-  { id: 5, icon: Tanstack, name: "TanStack Query" },
+  { id: 5, icon: NextJs, name: "Next.js" },
 
 ];
 
