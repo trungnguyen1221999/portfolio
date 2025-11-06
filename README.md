@@ -6,7 +6,7 @@ It showcases my projects, skills, and experience in web development and digital 
 **Live Preview:** [https://kainguyen.netlify.app/](https://kainguyen.netlify.app/)  
 **Deployed via:** Netlify
 <p align="center">
-  <img src="blob:https://imgur.com/fd906685-7ff3-430c-a4bc-1d65fceb67b6" alt="" width="1000"/>
+  <img src="https://i.imgur.com/2qLKLi8.webp" alt="" width="1000"/>
 </p>
 <p align="center">
   <img src="https://i.imgur.com/4Qq5QTP.webp" alt="" width="1000"/>
