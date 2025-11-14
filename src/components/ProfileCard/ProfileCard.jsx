@@ -38,9 +38,9 @@ const ProfileCardComponent = ({
   enableMobileTilt = false,
   mobileTiltSensitivity = 5,
   miniAvatarUrl,
-  name = "Javi A. Torres",
+  name = "Kai Nguyen",
   title = "Software Engineer",
-  handle = "javicodes",
+  handle = "kai-nguyen",
   status = "Online",
   contactText = "Contact",
   showUserInfo = true,
@@ -313,9 +313,9 @@ const ProfileCardComponent = ({
                     <div className="pc-status">{status}</div>
                   </div>
                 </div>
-                <a href="#contact"
+                <a
+                  href="#contact"
                   className="pc-contact-btn"
-                 
                   style={{ pointerEvents: "auto" }}
                   type="button"
                   aria-label={`Contact ${name || "user"}`}
