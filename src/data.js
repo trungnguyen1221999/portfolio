@@ -95,6 +95,7 @@ export const listProyek = [
     tenchStack: [
       "fullstack",
       "javascript",
+      "tailwindcss",
       "typescript",
       "react",
       "nodejs",
