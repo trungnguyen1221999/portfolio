@@ -79,6 +79,9 @@ export const ChromaGrid = ({
         "--r": `${radius}px`,
         "--cols": columns,
         "--rows": rows,
+        width: "100%",
+        padding: "0",
+        margin: "0",
       }}
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
@@ -86,7 +89,7 @@ export const ChromaGrid = ({
       {data.map((c, i) => (
         <article
           key={i}
-          className="chroma-card overflow-y-auto max-h-[calc(100vh-2rem)] md:max-h-[80vh]"
+          className="chroma-card flex flex-col overflow-hidden w-full"
           onMouseMove={handleCardMove}
           onClick={() => onItemClick(c)}
           style={{
@@ -95,15 +98,55 @@ export const ChromaGrid = ({
             cursor: "pointer",
           }}
         >
-          <div className="chroma-img-wrapper">
-            <img src={c.image} alt={c.title} loading="lazy" />
+          <div
+            className="chroma-img-wrapper flex-shrink-0 w-full overflow-hidden"
+            style={{ height: "450px" }}
+          >
+            <img
+              src={c.image}
+              alt={c.title}
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
           </div>
 
-          <footer className="chroma-info">
-            <h3 className="name">{c.title}</h3>
-            {c.handle && <span className="handle">{c.handle}</span>}
-            <p className="role">{c.subtitle}</p>
-            {c.location && <span className="location">{c.location}</span>}
+          <footer
+            className="chroma-info p-5 flex flex-col"
+            style={{ minHeight: "140px" }}
+          >
+            <div className="flex-1">
+              <h3 className="name text-lg md:text-xl font-semibold mb-1 line-clamp-1">
+                {c.title}
+              </h3>
+              {c.handle && (
+                <span className="handle text-sm text-gray-500 block mb-1 line-clamp-1">
+                  {c.handle}
+                </span>
+              )}
+              <p className="role text-sm text-gray-700 line-clamp-2 mb-2">
+                {c.subtitle}
+              </p>
+            </div>
+
+            {/* Tech Stack Tags - Dark Theme */}
+            {c.tenchStack && c.tenchStack.length > 0 && (
+              <div className="flex flex-wrap gap-1.5 mt-auto">
+                {c.tenchStack.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="px-2 py-0.5 text-xs font-medium rounded-full bg-black text-white border border-gray-700"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {c.location && (
+              <span className="location text-xs text-gray-400 mt-2">
+                {c.location}
+              </span>
+            )}
           </footer>
         </article>
       ))}

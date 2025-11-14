@@ -92,6 +92,14 @@ export const listProyek = [
     borderColor: "#fff500",
     gradient: "linear-gradient(145deg, #fff500, #000)",
     url: "https://github.com/trungnguyen1221999/restaurant-fullstack",
+    tenchStack: [
+      "fullstack",
+      "javascript",
+      "typescript",
+      "react",
+      "nodejs",
+      "mongodb",
+    ],
     dad: "100",
   },
   {
@@ -104,6 +112,14 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://github.com/trungnguyen1221999/-Blinkit-Clone",
+    tenchStack: [
+      "fullstack",
+      "react",
+      "typescript",
+      "tailwindcss",
+      "nodejs",
+      "mongodb",
+    ],
     dad: "100",
   },
   {
@@ -116,6 +132,14 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://github.com/trungnguyen1221999/Shopee-Clone---Trung-Nguyen",
+    tenchStack: [
+      "fullstack",
+      "react",
+      "typescript",
+      "styled-components",
+      "nodejs",
+      "mongodb",
+    ],
     dad: "200",
   },
   {
@@ -128,6 +152,13 @@ export const listProyek = [
     borderColor: "#00806c",
     gradient: "linear-gradient(145deg, #00806c, #000)",
     url: "https://github.com/trungnguyen1221999/portfolio",
+    tenchStack: [
+      "react",
+      "javascript",
+      "tailwindcss",
+      "shadcn-ui",
+      "reactbits",
+    ],
     dad: "100",
   },
 
@@ -141,6 +172,7 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://github.com/trungnguyen1221999/Verkkokauppa",
+    tenchStack: ["frontend", "react", "javascript", "styled-components"],
     dad: "300",
   },
   {
@@ -153,6 +185,13 @@ export const listProyek = [
     borderColor: "#faff00",
     gradient: "linear-gradient(145deg, #faff00, #000)",
     url: "https://github.com/trungnguyen1221999/next-js-dashboard",
+    tenchStack: [
+      "frontend",
+      "nextjs",
+      "javascript",
+      "tailwindcss",
+      "shadcn-ui",
+    ],
     dad: "100",
   },
   {
@@ -166,6 +205,7 @@ export const listProyek = [
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://github.com/trungnguyen1221999/tea-shop",
     dad: "400",
+    tenchStack: ["frontend", "html", "javascript", "css"],
   },
   {
     id: 5,
@@ -178,6 +218,7 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://github.com/shunlei99/GameJam2",
+    tenchStack: ["unity", "c#"],
     dad: "500",
   },
   {
@@ -191,6 +232,7 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://github.com/trungnguyen1221999/pikachu--android",
+    tenchStack: ["unity", "c#"],
     dad: "600",
   },
   {
@@ -204,6 +246,7 @@ export const listProyek = [
     borderColor: "#e44b8d",
     gradient: "linear-gradient(180deg, #e44b8d, #000)",
     url: "https://github.com/mazinstein/knives-merge",
+    tenchStack: ["unity", "c#"],
     dad: "600",
   },
 ];

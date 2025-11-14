@@ -238,23 +238,22 @@ function App() {
 
         {/* 💼 Projects */}
         <div className="proyek mt-16" id="project">
-          <div className="p-6 sm:p-8 rounded-2xl">
-            <h1 className="text-center text-2xl sm:text-3xl font-bold mb-2 text-white">
-              Projects
-            </h1>
-            <p className="text-center text-xs sm:text-sm opacity-60 md:mb-6 -mb-6 text-gray-200">
-              A selection of works showcasing my development journey.
-            </p>
-            <div className="scale-90 sm:scale-100">
-              <ChromaGrid
-                items={listProyek}
-                onItemClick={handleProjectClick}
-                radius={400}
-                damping={0.45}
-                fadeOut={0.6}
-                ease="power3.out"
-              />
-            </div>
+          <h1 className="text-center text-2xl sm:text-3xl font-bold mb-2 text-white">
+            Projects
+          </h1>
+          <p className="text-center text-xs sm:text-sm opacity-60 md:mb-6 -mb-6 text-gray-200">
+            A selection of works showcasing my development journey.
+          </p>
+          <div className="w-full">
+            <ChromaGrid
+              items={listProyek}
+              onItemClick={handleProjectClick}
+              radius={400}
+              damping={0.45}
+              fadeOut={0.6}
+              ease="power3.out"
+              className="w-full"
+            />
           </div>
         </div>
 
