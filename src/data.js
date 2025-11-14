@@ -147,7 +147,7 @@ export const listProyek = [
     id: 9,
     image: Proyek9,
     title: "Dashboard Panel",
-    subtitle: "frontend project built with Next.js and Shadcn UI",
+    subtitle: "Frontend project built with Next.js and Shadcn UI",
     fullDescription:
       "It demonstrates how to structure a modern web application using React, TypeScript, and a component-based design system. 🚀 Tech Stack: Framework: Next.js, UI Library: Shadcn UI, Language: TypeScript. Styling: Tailwind CSS. Deployment: Vercel. 🧠 Project Purpose: This project was created as a personal learning exercise to understand the fundamentals of Next.js (client components, server components), practice using Shadcn UI for building modern, accessible, and reusable components, implement Light/Dark Mode, and explore component-driven development and responsive design with Tailwind CSS.",
     borderColor: "#faff00",
