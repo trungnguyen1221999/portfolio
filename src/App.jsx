@@ -84,7 +84,7 @@ function App() {
 
             {/* Mô tả */}
             <BlurText
-              text="I feel at home where technology meets business — blending creativity, code, and commerce to build meaningful e-commerce experiences."
+              text="I feel at home where technology meets business — blending creativity, code, and strategy to build meaningful digital experiences"
               delay={150}
               animateBy="words"
               direction="top"
@@ -112,13 +112,13 @@ function App() {
 
           {/* Profile card */}
           <div className="mx-auto md:mr-0 animate__animated animate__fadeInUp animate__delay-4s scale-90 md:scale-75 lg:scale-85">
-           <ElectricBorder
-            color="#0007d7"
-            speed={2}
-            chaos={1}
-            thickness={5}
-            style={{ borderRadius: 16 }}
-           >
+            <ElectricBorder
+              color="#0007d7"
+              speed={2}
+              chaos={1}
+              thickness={5}
+              style={{ borderRadius: 16 }}
+            >
               <ProfileCard
                 name="Kai Nguyen"
                 title="Web Developer"
@@ -126,12 +126,11 @@ function App() {
                 contactText="Contact Me"
                 avatarUrl="./assets/Kai.png"
                 showUserInfo={true}
-                showBehindGradient ={true}
-
+                showBehindGradient={true}
                 enableTilt={true}
                 enableMobileTilt={5}
               />
-           </ElectricBorder>
+            </ElectricBorder>
           </div>
         </div>
 

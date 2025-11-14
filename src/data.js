@@ -17,7 +17,6 @@ import StyledComponents from "/assets/tools/styled.png";
 import Tailwind from "/assets/tools/tailwind.png";
 import NextJs from "/assets/tools/nextjs.png";
 
-
 import NodeJS from "/assets/tools/nodejs.png";
 import Express from "/assets/tools/express.png";
 import MongoDB from "/assets/tools/mongo.png";
@@ -39,7 +38,6 @@ export const programmingLanguages = [
   { id: 2, icon: Ts, name: "TypeScript" },
   { id: 3, icon: Csharp, name: "C#" },
   { id: 4, icon: Cpp, name: "C++" },
-
 ];
 
 // 🎨 2. Frontend
@@ -48,7 +46,6 @@ export const frontEnd = [
   { id: 2, icon: StyledComponents, name: "Styled Components" },
   { id: 3, icon: Tailwind, name: "Tailwind CSS" },
   { id: 5, icon: NextJs, name: "Next.js" },
-
 ];
 
 // ⚙️ 3. Backend
@@ -83,30 +80,18 @@ import Proyek6 from "/assets/proyek/proyek6.png";
 import Proyek7 from "/assets/proyek/proyek7.png";
 import Proyek8 from "/assets/proyek/proyek8.png";
 import Proyek9 from "/assets/proyek/proyek9.png";
-
+import Proyek10 from "/assets/proyek/proyek10.png";
 export const listProyek = [
   {
-    id: 9,
-    image: Proyek9,
-    title: "Dashboard Panel",
-    subtitle: "frontend project built with Next.js and Shadcn UI",
+    id: 10,
+    image: Proyek10,
+    title: "Kai's Restaurant",
+    subtitle: "Full stack Restaurant website with admin page.",
     fullDescription:
-      "It demonstrates how to structure a modern web application using React, TypeScript, and a component-based design system. 🚀 Tech Stack: Framework: Next.js, UI Library: Shadcn UI, Language: TypeScript. Styling: Tailwind CSS. Deployment: Vercel. 🧠 Project Purpose: This project was created as a personal learning exercise to understand the fundamentals of Next.js (client components, server components), practice using Shadcn UI for building modern, accessible, and reusable components, implement Light/Dark Mode, and explore component-driven development and responsive design with Tailwind CSS.",
-    borderColor: "#faff00",
-    gradient: "linear-gradient(145deg, #faff00, #000)",
-    url: "https://github.com/trungnguyen1221999/next-js-dashboard",
-    dad: "100",
-  },
-  {
-    id: 8,
-    image: Proyek8,
-    title: "Personal Portfolio",
-    subtitle: "My personal website.",
-    fullDescription:
-      "A modern personal portfolio website built with Vite, React, TailwindCSS, JavaScript and ReactBits. It showcases my projects, skills, and experience in web development and digital marketing.",
-    borderColor: "#00806c",
-    gradient: "linear-gradient(145deg, #00806c, #000)",
-    url: "https://github.com/trungnguyen1221999/portfolio",
+      "A full-stack restaurant management and booking system with a modern, fully responsive UI and complete admin dashboard, built with MongoDB, Express, React, Tailwind, and Node.js; features for users include browsing menu items, viewing categories, searching with pagination, and making table reservations, while the admin dashboard enables category management (create, edit, delete), menu management (create, edit, delete, image upload), reservation management, secure authentication, search and filtering, and pagination, providing a seamless experience for both customers and administrators.",
+    borderColor: "#fff500",
+    gradient: "linear-gradient(145deg, #fff500, #000)",
+    url: "https://github.com/trungnguyen1221999/restaurant-fullstack",
     dad: "100",
   },
   {
@@ -134,6 +119,19 @@ export const listProyek = [
     dad: "200",
   },
   {
+    id: 8,
+    image: Proyek8,
+    title: "Personal Portfolio",
+    subtitle: "My personal website.",
+    fullDescription:
+      "A modern personal portfolio website built with Vite, React, TailwindCSS, JavaScript and ReactBits. It showcases my projects, skills, and experience in web development and digital marketing.",
+    borderColor: "#00806c",
+    gradient: "linear-gradient(145deg, #00806c, #000)",
+    url: "https://github.com/trungnguyen1221999/portfolio",
+    dad: "100",
+  },
+
+  {
     id: 3,
     image: Proyek3,
     title: "VerkkoKauppa Clone",
@@ -144,6 +142,18 @@ export const listProyek = [
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://github.com/trungnguyen1221999/Verkkokauppa",
     dad: "300",
+  },
+  {
+    id: 9,
+    image: Proyek9,
+    title: "Dashboard Panel",
+    subtitle: "frontend project built with Next.js and Shadcn UI",
+    fullDescription:
+      "It demonstrates how to structure a modern web application using React, TypeScript, and a component-based design system. 🚀 Tech Stack: Framework: Next.js, UI Library: Shadcn UI, Language: TypeScript. Styling: Tailwind CSS. Deployment: Vercel. 🧠 Project Purpose: This project was created as a personal learning exercise to understand the fundamentals of Next.js (client components, server components), practice using Shadcn UI for building modern, accessible, and reusable components, implement Light/Dark Mode, and explore component-driven development and responsive design with Tailwind CSS.",
+    borderColor: "#faff00",
+    gradient: "linear-gradient(145deg, #faff00, #000)",
+    url: "https://github.com/trungnguyen1221999/next-js-dashboard",
+    dad: "100",
   },
   {
     id: 4,
