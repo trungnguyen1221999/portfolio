@@ -17,9 +17,9 @@ const Navbar = ({ hidden = false }) => {
 
   // Menu items desktop (không có Home, logo sẽ là Home)
   const desktopItems = [
-     { label: "Home", href: "#home" },
+    { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
-    { label: "Project", href: "#project" },
+    { label: "Projects", href: "#project" },
     { label: "Contact", href: "#contact" },
   ];
 
