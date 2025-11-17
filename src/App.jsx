@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useMemo } from "react";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
 import ShinyText from "./components/ShinyText/ShinyText";
 import BlurText from "./components/BlurText/BlurText";
@@ -28,6 +28,7 @@ function App() {
 
   const handleProjectClick = (project) => setSelectedProject(project);
   const handleCloseModal = () => setSelectedProject(null);
+  const [selectedStack, setSelectedStack] = useState("All");
 
   useEffect(() => {
     const isReload =
@@ -53,7 +54,23 @@ function App() {
     if (aboutRef.current) observer.observe(aboutRef.current);
     return () => observer.disconnect();
   }, []);
-
+  const techStacks = useMemo(() => {
+    const stacks = new Set();
+    listProyek.forEach((proj) => {
+      if (Array.isArray(proj.techstack)) {
+        proj.techstack.forEach((stack) => stacks.add(stack));
+      }
+    });
+    return ["All", ...Array.from(stacks)];
+  }, [listProyek]);
+  // Filter projects by selected tech stack
+  const filteredProyek = useMemo(() => {
+    if (selectedStack === "All") return listProyek;
+    return listProyek.filter(
+      (proj) =>
+        Array.isArray(proj.techstack) && proj.techstack.includes(selectedStack)
+    );
+  }, [listProyek, selectedStack]);
   return (
     <>
       {/* 🌌 Background Aurora */}
@@ -241,12 +258,61 @@ function App() {
           <h1 className="text-center text-2xl sm:text-3xl font-bold mb-2 text-white">
             Projects
           </h1>
-          <p className="text-center text-xs sm:text-sm opacity-60 md:mb-6 -mb-6 text-gray-200">
+          <p className="text-center text-xs sm:text-sm opacity-60 md:mb-6 text-gray-200">
             A selection of works showcasing my development journey.
           </p>
-          <div className="w-full">
+          {/* Filter Buttons */}
+          <>
+            <style>
+              {`
+      .stack-btn {
+        cursor: pointer;
+        padding: 0.25rem 0.75rem;
+        border-radius: 16px;
+        border: 2px solid transparent;
+        transition: border 0.3s, box-shadow 0.3s;
+      }
+      .stack-btn.selected {
+        border: 2px solid #7df9ff;
+        box-shadow: 0 0 8px #7df9ff;
+      }
+    `}
+            </style>
+            <div className="flex flex-wrap justify-center gap-2 my-4">
+              {techStacks.map((stack) => {
+                const isSelected = stack === selectedStack;
+                const button = (
+                  <button
+                    key={stack}
+                    className={`stack-btn${isSelected ? " selected" : ""}`}
+                    onClick={() => setSelectedStack(stack)}
+                  >
+                    {stack}
+                  </button>
+                );
+                return isSelected ? (
+                  <ElectricBorder
+                    key={stack}
+                    color="#7df9ff"
+                    speed={1}
+                    chaos={0.5}
+                    thickness={2}
+                    style={{
+                      borderRadius: 16,
+                      transition: "box-shadow 0.3s, border 0.3s",
+                    }}
+                  >
+                    {button}
+                  </ElectricBorder>
+                ) : (
+                  button
+                );
+              })}
+            </div>
+          </>
+          <div className="w-full mt-4">
             <ChromaGrid
-              items={listProyek}
+              items={filteredProyek}
               onItemClick={handleProjectClick}
               radius={400}
               damping={0.45}
