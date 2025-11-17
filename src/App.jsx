@@ -261,6 +261,9 @@ function App() {
           <p className="text-center text-xs sm:text-sm opacity-60 md:mb-6 text-gray-200">
             A selection of works showcasing my development journey.
           </p>
+          <p className="text-center text-sm font-bold italic mb-6">
+            All projects include live preview and source code.
+          </p>
           {/* Filter Buttons */}
           <>
             <style>
