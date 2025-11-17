@@ -85,22 +85,32 @@ const Business = () => {
           createPortal(
             <div
               onClick={handleClose}
-              className="fixed inset-0 bg-black flex justify-center items-center z-[9999] overflow-y-auto p-2"
+              className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-[9999] p-4 overflow-y-auto"
             >
               <div
                 onClick={(e) => e.stopPropagation()}
-                className={`bg-zinc-900 border border-violet-600 rounded-none md:rounded-2xl shadow-2xl shadow-violet-500/20 w-full md:max-w-lg transform transition-transform duration-300 ${
-                  isClosing ? "animate-out" : "animate-in"
-                }`}
+                className={`
+          bg-zinc-900 border border-violet-500/50 rounded-2xl shadow-2xl shadow-violet-500/20
+          w-full max-w-3xl transform transition-transform duration-300
+          flex flex-col
+          ${isClosing ? "animate-out" : "animate-in"}
+        `}
+                style={{
+                  maxHeight: "calc(100vh - 2rem)",
+                  overflowY: "auto",
+                }}
               >
+                {/* Hình ảnh */}
                 <img
                   src={currentImage}
                   alt="OmaCustom.fi"
-                  className="w-full h-[50vh] sm:h-60 object-cover md:rounded-t-2xl"
+                  className="w-full h-72 md:h-96 object-cover rounded-t-2xl"
                 />
-                <div className="p-6 flex flex-col gap-4">
+
+                {/* Nội dung */}
+                <div className="p-6 md:p-8 flex flex-col gap-4">
                   <div className="flex justify-between items-start">
-                    <h2 className="text-xl md:text-2xl font-bold text-white">
+                    <h2 className="text-2xl md:text-3xl font-bold text-white">
                       OmaCustom.fi
                     </h2>
                     <button
@@ -112,21 +122,32 @@ const Business = () => {
                   </div>
 
                   <p className="text-zinc-300 text-sm md:text-base leading-relaxed">
-                    My first eCommerce store in Finland, built on Shopify to
-                    sell customized products for local customers.
+                    My first personalized eCommerce store in Finland, built with{" "}
+                    <span className="text-violet-300 font-medium">Shopify</span>{" "}
+                    as the main platform and integrated with{" "}
+                    <span className="text-violet-300 font-medium">
+                      Teinblue
+                    </span>{" "}
+                    to manage print-on-demand production. The website
+                    specializes in fully customizable products such as T-shirts,
+                    blankets, mugs, pillows, metal signs, and more — all
+                    customizable through a rich library of cliparts, allowing
+                    customers to design their own unique gifts or personal
+                    items.
                   </p>
 
                   <a
                     href="https://omacustom.fi"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center justify-center gap-2 font-semibold bg-violet-600 p-3 px-5 rounded-full w-full cursor-pointer border border-transparent hover:bg-cyan-700 transition-colors"
+                    className="mt-4 inline-flex items-center justify-center gap-2 font-semibold bg-violet-600 p-3 px-5 rounded-full w-full cursor-pointer border border-transparent hover:bg-violet-700 transition-colors text-sm md:text-base"
                   >
                     Visit Website
                   </a>
                 </div>
               </div>
 
+              {/* Animation CSS */}
               <style>{`
         @keyframes scaleIn {
           from { transform: scale(0.95); opacity: 0; }
@@ -145,7 +166,7 @@ const Business = () => {
         }
       `}</style>
             </div>,
-            document.body // 👉 render ra ngoài stacking context
+            document.body
           )}
       </div>
     </ElectricBorder>
