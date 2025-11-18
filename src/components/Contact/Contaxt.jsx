@@ -35,23 +35,20 @@ const Contaxt = () => {
 
   const onSubmit = async (data) => {
     try {
-      // ✅ Hiện popup
       setPopup(data);
-
-      // ✅ Reset form
       reset();
 
-      // ✅ Gửi dữ liệu qua FormSubmit bằng fetch (không redirect)
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("message", data.message);
+      formData.append("_captcha", "false");
+      formData.append("_subject", "New Contact Message");
+      formData.append("_template", "table"); // optional nhưng nên có
+
       await fetch("https://formsubmit.co/ajax/trungnguyen1221999@gmail.com", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          ...data,
-          _captcha: "false", // Tắt captcha để gửi
-        }),
+        body: formData,
       });
     } catch (err) {
       console.error("Error sending email:", err);
