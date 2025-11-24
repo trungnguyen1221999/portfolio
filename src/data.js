@@ -83,6 +83,26 @@ import Proyek9 from "/assets/proyek/proyek9.png";
 import Proyek10 from "/assets/proyek/proyek10.png";
 export const listProyek = [
   {
+    id: 1,
+    image: Proyek1,
+    title: "Blinkit Clone",
+    subtitle: "Full stack eCommerce website with admin dashboard.",
+    fullDescription:
+      "Full-Stack | React, TypeScript, TailwindCSS, Node.js, Express, MongoDB. Full end-to-end eCommerce system with complete admin dashboard (products, orders, users, revenue). Advanced authentication: JWT, secure cookies, email verification, password reset via verification code. Product catalog, cart, checkout, customer management & analytics. Cloudinary media handling + fully responsive UI/UX.",
+    borderColor: "#3B82F6",
+    gradient: "linear-gradient(145deg, #3B82F6, #000)",
+    url: "https://github.com/trungnguyen1221999/-Blinkit-Clone",
+    techstack: [
+      "fullstack",
+      "react",
+      "typescript",
+      "tailwindcss",
+      "nodejs",
+      "mongodb",
+    ],
+    dad: "100",
+  },
+  {
     id: 10,
     image: Proyek10,
     title: "Kai's Restaurant",
@@ -98,26 +118,6 @@ export const listProyek = [
       "tailwindcss",
       "typescript",
       "react",
-      "nodejs",
-      "mongodb",
-    ],
-    dad: "100",
-  },
-  {
-    id: 1,
-    image: Proyek1,
-    title: "Binkeyit Clone",
-    subtitle: "Full stack eCommerce website.",
-    fullDescription:
-      "Build a complete e-commerce platform that looks like Blinkit using the MERN stack! In this project, we will create an online shopping site with key features, including product uploads, an admin panel, and management for categories and subcategories. I use MongoDB, Express, React, Tailwind and Node.js",
-    borderColor: "#3B82F6",
-    gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://github.com/trungnguyen1221999/-Blinkit-Clone",
-    techstack: [
-      "fullstack",
-      "react",
-      "typescript",
-      "tailwindcss",
       "nodejs",
       "mongodb",
     ],
@@ -147,7 +147,7 @@ export const listProyek = [
     id: 8,
     image: Proyek8,
     title: "Personal Portfolio",
-    subtitle: "My personal website.",
+    subtitle: "My personal portfolio.",
     fullDescription:
       "A modern personal portfolio website built with Vite, React, TailwindCSS, JavaScript and ReactBits. It showcases my projects, skills, and experience in web development and digital marketing.",
     borderColor: "#00806c",
@@ -194,7 +194,7 @@ export const listProyek = [
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://github.com/trungnguyen1221999/tea-shop",
     dad: "400",
-    techstack: ["frontend", "html", "javascript", "css"],
+    techstack: ["frontend",  "javascript"],
   },
   {
     id: 5,
