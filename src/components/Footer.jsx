@@ -1,4 +1,3 @@
-import "remixicon/fonts/remixicon.css";
 import Dock from "./Dock/Dock";
 import { VscHome, VscArchive, VscAccount } from "react-icons/vsc";
 
