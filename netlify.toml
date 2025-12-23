@@ -2,7 +2,13 @@
   command = "npm run build"
   publish = "dist"
 
-# SPA fallback so deep links work
+# cho phép load asset trước
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+# SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
