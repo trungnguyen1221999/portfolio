@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio
+# 🌐 Personal Portfolio 
 
 A modern personal portfolio website built with **Vite**, **React**, **TailwindCSS**, **JavaScript** and **ReactBits** .  
 It showcases my projects, skills, and experience in web development and digital marketing.  
