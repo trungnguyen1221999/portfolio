@@ -6,12 +6,10 @@ const urlsToCache = [
   '/index.html',
   '/manifest.json',
   '/sw.js',
-  // JS, CSS
-  '/assets/index-BOfewvoy.js',
-  '/assets/index-BWne_ta5.css',
-  // Icons
-  '/assets/icons/icon-192x192.png',
-  '/assets/icons/icon-512x512.png',
+  // JS, CSS (update to latest build names)
+  '/assets/index-DYfjZ98H.js',
+  '/assets/index-BeYk-pBF.css',
+  // Icons removed
   // Images (add all images you want offline)
   '/assets/business.jpg',
   '/assets/CV.pdf',
