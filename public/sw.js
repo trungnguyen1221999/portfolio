@@ -19,12 +19,7 @@ const urlsToCache = [
   '/assets/Kai3.jpg',
   '/assets/pc.png',
   '/assets/phone.png',
-  // Fonts
-  '/assets/remixicon-BBpe-Xu7.woff',
-  '/assets/remixicon-BVJ9S1ev.eot',
-  '/assets/remixicon-BVvFtaex.woff2',
-  '/assets/remixicon-C2wQ2gtc.svg',
-  '/assets/remixicon-CfJD46dY.ttf',
+  
   // Add more if needed
 ];
 
