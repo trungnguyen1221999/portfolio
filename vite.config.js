@@ -2,17 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: "/",
+  base: '/',
   plugins: [react(), tailwindcss()],
   build: {
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
-        entryFileNames: 'assets/[name].js',
-        chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name].[ext]',
         manualChunks(id) {
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
@@ -29,5 +25,5 @@ export default defineConfig({
         }
       }
     }
-  },
+  }
 })
