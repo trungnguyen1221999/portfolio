@@ -11,9 +11,6 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react'
-            }
             if (id.includes('three') || id.includes('@react-three')) {
               return 'vendor-three'
             }
