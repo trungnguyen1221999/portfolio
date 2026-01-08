@@ -21,6 +21,9 @@ import NodeJS from "/assets/tools/nodejs.png";
 import Express from "/assets/tools/express.png";
 import MongoDB from "/assets/tools/mongo.png";
 import MySQL from "/assets/tools/mysql.png";
+import Postgresql from "/assets/tools/postgresql.png";
+import Redis from "/assets/tools/redis.png";
+import Docker from "/assets/tools/docker.png";
 
 import Vscode from "/assets/tools/vscode.png";
 import Github from "/assets/tools/github.png";
@@ -31,6 +34,7 @@ import FBAds from "/assets/tools/fbads.png";
 import IGAds from "/assets/tools/igads.jpg";
 import Email from "/assets/tools/email.jpg";
 import Influencer from "/assets/tools/influencer.png";
+
 
 // 🧩 1. Programming Languages
 export const programmingLanguages = [
@@ -54,6 +58,9 @@ export const backEnd = [
   { id: 2, icon: Express, name: "Express JS" },
   { id: 3, icon: MongoDB, name: "MongoDB" },
   { id: 4, icon: MySQL, name: "MySQL" },
+  { id: 5, icon: Postgresql, name: "Postgresql" },
+  { id: 6, icon: Redis, name: "Redis" },
+  { id: 7, icon: Redis, name: "Docker" },
 ];
 
 // 🧰 4. Tools
