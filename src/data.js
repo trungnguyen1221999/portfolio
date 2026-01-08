@@ -60,7 +60,7 @@ export const backEnd = [
   { id: 4, icon: MySQL, name: "MySQL" },
   { id: 5, icon: Postgresql, name: "Postgresql" },
   { id: 6, icon: Redis, name: "Redis" },
-  { id: 7, icon: Redis, name: "Docker" },
+  { id: 7, icon: Docker, name: "Docker" },
 ];
 
 // 🧰 4. Tools
