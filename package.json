@@ -13,15 +13,11 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
-    "@react-three/drei": "^10.6.1",
-    "@react-three/fiber": "^9.3.0",
-    "@react-three/rapier": "^2.1.0",
     "@tailwindcss/vite": "^4.1.11",
     "animate.css": "^4.1.1",
     "aos": "^3.0.0-beta.6",
     "firebase": "^12.1.0",
     "gsap": "^3.13.0",
-    "meshline": "^3.3.1",
     "motion": "^12.23.12",
     "ogl": "^1.0.11",
     "react": "^18.2.0",
@@ -31,7 +27,6 @@
     "remixicon": "^4.6.0",
     "tailwind-scrollbar-hide": "^4.0.0",
     "tailwindcss": "^4.1.11",
-    "three": "^0.167.1",
     "zod": "^4.1.12"
   },
   "devDependencies": {
