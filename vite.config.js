@@ -1,22 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 // https://vite.dev/config/
 export default defineConfig({
   base: "/",
   plugins: [
-    react(),
+    react({
+      jsxRuntime: 'automatic'
+    }),
     tailwindcss(),
-    viteStaticCopy({
-      targets: [
-        { src: 'public/manifest.json', dest: '' },
-        { src: 'public/sw.js', dest: '' },
-        { src: 'public/assets/icons/icon-192x192.png', dest: 'assets/icons' },
-        { src: 'public/assets/icons/icon-512x512.png', dest: 'assets/icons' }
-      ]
-    })
   ],
   build: {
     rollupOptions: {
