@@ -16,13 +16,17 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            if (id.includes('react')) return 'vendor-react';
-            if (id.includes('gsap')) return 'vendor-gsap';
-            if (id.includes('firebase')) return 'vendor-firebase';
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            if (id.includes('gsap')) return 'gsap-vendor';
             return 'vendor';
           }
         }
       }
     }
+  },
+  define: {
+    global: 'globalThis',
   },
 })
