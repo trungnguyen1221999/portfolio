@@ -35,7 +35,7 @@ function App() {
       performance.getEntriesByType("navigation")[0]?.type === "reload";
     if (isReload) {
       window.location.replace(
-        window.location.origin + import.meta.env.BASE_URL
+        window.location.origin + import.meta.env.BASE_URL,
       );
     }
   }, []);
@@ -48,7 +48,7 @@ function App() {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (aboutRef.current) observer.observe(aboutRef.current);
@@ -68,7 +68,7 @@ function App() {
     if (selectedStack === "All") return listProyek;
     return listProyek.filter(
       (proj) =>
-        Array.isArray(proj.techstack) && proj.techstack.includes(selectedStack)
+        Array.isArray(proj.techstack) && proj.techstack.includes(selectedStack),
     );
   }, [listProyek, selectedStack]);
   return (
@@ -185,13 +185,13 @@ function App() {
                   <div className="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-y-4 sm:gap-y-0 w-full">
                     <div>
                       <h1 className="text-xl md:text-2xl mb-1">
-                        10<span className="text-violet-500">+ Projects</span>
+                        20<span className="text-violet-500">+ Projects</span>
                       </h1>
                       <p className="text-sm">in Web and Game</p>
                     </div>
                     <div>
                       <h1 className="text-xl md:text-2xl mb-1">
-                        2<span className="text-violet-500">+ Years</span>
+                        3<span className="text-violet-500">+ Years</span>
                       </h1>
                       <p className="text-sm">of Learning Coding</p>
                     </div>

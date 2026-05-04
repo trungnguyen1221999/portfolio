@@ -35,7 +35,6 @@ import IGAds from "/assets/tools/igads.jpg";
 import Email from "/assets/tools/email.jpg";
 import Influencer from "/assets/tools/influencer.png";
 
-
 // 🧩 1. Programming Languages
 export const programmingLanguages = [
   { id: 1, icon: Js, name: "JavaScript" },
@@ -88,7 +87,56 @@ import Proyek7 from "/assets/proyek/proyek7.png";
 import Proyek8 from "/assets/proyek/proyek8.png";
 import Proyek9 from "/assets/proyek/proyek9.png";
 import Proyek10 from "/assets/proyek/proyek10.png";
+import Proyek11 from "/assets/proyek/proyek11.png";
+import Proyek12 from "/assets/proyek/proyek12.png";
+
 export const listProyek = [
+  {
+    id: 13,
+    image: Proyek12,
+    title: "AI UGC Generator",
+    subtitle:
+      "A full-stack application for generating UGC-style product images and videos using AI",
+    fullDescription:
+      "Full-Stack | React, TypeScript, TailwindCSS, Node.js, Express, .Net, C#, Unit Test, Docker, Redis, AI. AI UGC Generator helps users create product marketing assets quickly: Upload product + model images. Generate one realistic product image via Gemini. Generate a short UGC video from that image via Veo. Save and manage projects in a dashboard.",
+    borderColor: "##b4fda6",
+    gradient: "linear-gradient(145deg, ##b4fda6, #000)",
+    url: "https://github.com/trungnguyen1221999/AI-UGC-Generator",
+    techstack: [
+      "fullstack",
+      "react",
+      "typescript",
+      "tailwindcss",
+      "nodejs",
+      "postgresql",
+      "C#",
+      ".Net",
+      "docker",
+      "redis",
+      "AI",
+    ],
+    dad: "100",
+  },
+  {
+    id: 12,
+    image: Proyek11,
+    title: "QR Code Game",
+    subtitle: "Full stack web game with host and player functionality.",
+    fullDescription:
+      "Full-Stack | React, JavaScript, TailwindCSS, Node.js, Express, MongoDB. A real-time multiplayer QR code scavenger hunt game where players race through physical checkpoints, scan QR codes, complete mini-games, and compete on a live leaderboard.  ",
+    borderColor: "##b4fda6",
+    gradient: "linear-gradient(145deg, ##b4fda6, #000)",
+    url: "https://github.com/trungnguyen1221999/QR-Code-Game",
+    techstack: [
+      "fullstack",
+      "react",
+      "javascript",
+      "tailwindcss",
+      "nodejs",
+      "mongodb",
+    ],
+    dad: "100",
+  },
   {
     id: 1,
     image: Proyek1,
@@ -201,7 +249,7 @@ export const listProyek = [
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://github.com/trungnguyen1221999/tea-shop",
     dad: "400",
-    techstack: ["frontend",  "javascript"],
+    techstack: ["frontend", "javascript"],
   },
   {
     id: 5,
