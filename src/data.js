@@ -34,6 +34,9 @@ import FBAds from "/assets/tools/fbads.png";
 import IGAds from "/assets/tools/igads.jpg";
 import Email from "/assets/tools/email.jpg";
 import Influencer from "/assets/tools/influencer.png";
+import Dotnet from "/assets/tools/dotnet.png";
+import SocketIo from "/assets/tools/socket-io.png";
+import RabbitMQ from "/assets/tools/rabbitmq.jpg";
 
 // 🧩 1. Programming Languages
 export const programmingLanguages = [
@@ -60,6 +63,9 @@ export const backEnd = [
   { id: 5, icon: Postgresql, name: "Postgresql" },
   { id: 6, icon: Redis, name: "Redis" },
   { id: 7, icon: Docker, name: "Docker" },
+  { id: 8, icon: Dotnet, name: ".Net" },
+  { id: 9, icon: SocketIo, name: "Socket.IO" },
+  { id: 10, icon: RabbitMQ, name: "RabbitMQ" },
 ];
 
 // 🧰 4. Tools
