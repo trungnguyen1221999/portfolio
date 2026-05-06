@@ -3,8 +3,6 @@ import { FiMenu, FiX } from "react-icons/fi";
 import GooeyNav from "./GooeyNav/GooeyNav";
 
 const Navbar = ({ hidden = false }) => {
-  if (hidden) return null;
-
   const [active, setActive] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -22,6 +20,8 @@ const Navbar = ({ hidden = false }) => {
     { label: "Projects", href: "#project" },
     { label: "Contact", href: "#contact" },
   ];
+
+  if (hidden) return null;
 
   return (
     <nav className="fixed top-0 left-0 w-full transition-all duration-300 z-50 ">

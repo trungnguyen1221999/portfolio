@@ -1,4 +1,4 @@
-import { useEffect, useId, useLayoutEffect, useRef } from "react";
+import { useCallback, useEffect, useId, useLayoutEffect, useRef } from "react";
 
 function hexToRgba(hex, alpha = 1) {
   if (!hex) return `rgba(0,0,0,${alpha})`;
@@ -31,7 +31,7 @@ const ElectricBorder = ({
   const rootRef = useRef(null);
   const strokeRef = useRef(null);
 
-  const updateAnim = () => {
+  const updateAnim = useCallback(() => {
     const svg = svgRef.current;
     const host = rootRef.current;
     if (!svg || !host) return;
@@ -44,7 +44,7 @@ const ElectricBorder = ({
     const height = Math.max(1, Math.round(host.clientHeight || 0));
 
     const dyAnims = Array.from(
-      svg.querySelectorAll('feOffset > animate[attributeName="dy"]')
+      svg.querySelectorAll('feOffset > animate[attributeName="dy"]'),
     );
     if (dyAnims.length >= 2) {
       dyAnims[0].setAttribute("values", `${height}; 0`);
@@ -52,7 +52,7 @@ const ElectricBorder = ({
     }
 
     const dxAnims = Array.from(
-      svg.querySelectorAll('feOffset > animate[attributeName="dx"]')
+      svg.querySelectorAll('feOffset > animate[attributeName="dx"]'),
     );
     if (dxAnims.length >= 2) {
       dxAnims[0].setAttribute("values", `${width}; 0`);
@@ -79,15 +79,17 @@ const ElectricBorder = ({
         if (typeof a.beginElement === "function") {
           try {
             a.beginElement();
-          } catch {}
+          } catch (error) {
+            void error;
+          }
         }
       });
     });
-  };
+  }, [chaos, filterId, speed]);
 
   useEffect(() => {
     updateAnim();
-  }, [speed, chaos]);
+  }, [updateAnim]);
 
   useLayoutEffect(() => {
     if (!rootRef.current) return;
@@ -95,7 +97,7 @@ const ElectricBorder = ({
     ro.observe(rootRef.current);
     updateAnim();
     return () => ro.disconnect();
-  }, []);
+  }, [updateAnim]);
 
   const inheritRadius = { borderRadius: style?.borderRadius ?? "inherit" };
 
@@ -132,7 +134,7 @@ const ElectricBorder = ({
     zIndex: -1,
     background: `linear-gradient(-30deg, ${hexToRgba(
       color,
-      0.8
+      0.8,
     )}, transparent, ${color})`,
   };
 

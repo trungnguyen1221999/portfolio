@@ -23,7 +23,6 @@ AOS.init();
 
 function App() {
   const aboutRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
   const handleProjectClick = (project) => setSelectedProject(project);
@@ -44,7 +43,6 @@ function App() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
           observer.disconnect();
         }
       },
@@ -62,7 +60,7 @@ function App() {
       }
     });
     return ["All", ...Array.from(stacks)];
-  }, [listProyek]);
+  }, []);
   // Filter projects by selected tech stack
   const filteredProyek = useMemo(() => {
     if (selectedStack === "All") return listProyek;
@@ -70,7 +68,7 @@ function App() {
       (proj) =>
         Array.isArray(proj.techstack) && proj.techstack.includes(selectedStack),
     );
-  }, [listProyek, selectedStack]);
+  }, [selectedStack]);
   return (
     <>
       {/* 🌌 Background Aurora */}

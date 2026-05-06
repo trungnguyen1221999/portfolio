@@ -7,15 +7,11 @@ import {
   useTransform,
   AnimatePresence,
 } from "motion/react";
-import {
-  Children,
-  cloneElement,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { Children, cloneElement, useEffect, useRef, useState } from "react";
 
 import "./Dock.css";
+
+void motion;
 
 function DockItem({
   children,
@@ -41,7 +37,7 @@ function DockItem({
   const targetSize = useTransform(
     mouseDistance,
     [-distance, 0, distance],
-    [baseItemSize, magnification, baseItemSize]
+    [baseItemSize, magnification, baseItemSize],
   );
   const size = useSpring(targetSize, spring);
 
@@ -63,9 +59,7 @@ function DockItem({
       tabIndex={0}
       role="button"
     >
-      {Children.map(children, (child) =>
-        cloneElement(child, { isHovered })
-      )}
+      {Children.map(children, (child) => cloneElement(child, { isHovered }))}
     </motion.div>
   );
 }

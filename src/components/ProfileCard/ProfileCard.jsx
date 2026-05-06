@@ -72,7 +72,7 @@ const ProfileCardComponent = ({
         "--pointer-from-center": `${clamp(
           Math.hypot(percentY - 50, percentX - 50) / 50,
           0,
-          1
+          1,
         )}`,
         "--pointer-from-top": `${percentY / 100}`,
         "--pointer-from-left": `${percentX / 100}`,
@@ -132,10 +132,10 @@ const ProfileCardComponent = ({
         event.clientX - rect.left,
         event.clientY - rect.top,
         card,
-        wrap
+        wrap,
       );
     },
-    [animationHandlers]
+    [animationHandlers],
   );
 
   const handlePointerEnter = useCallback(() => {
@@ -161,12 +161,12 @@ const ProfileCardComponent = ({
         event.offsetX,
         event.offsetY,
         card,
-        wrap
+        wrap,
       );
       wrap.classList.remove("active");
       card.classList.remove("active");
     },
-    [animationHandlers]
+    [animationHandlers],
   );
 
   const handleDeviceOrientation = useCallback(
@@ -184,10 +184,10 @@ const ProfileCardComponent = ({
         card.clientWidth / 2 +
           (beta - ANIMATION_CONFIG.DEVICE_BETA_OFFSET) * mobileTiltSensitivity,
         card,
-        wrap
+        wrap,
       );
     },
-    [animationHandlers, mobileTiltSensitivity]
+    [animationHandlers, mobileTiltSensitivity],
   );
 
   useEffect(() => {
@@ -211,7 +211,7 @@ const ProfileCardComponent = ({
             if (state === "granted") {
               window.addEventListener(
                 "deviceorientation",
-                deviceOrientationHandler
+                deviceOrientationHandler,
               );
             }
           })
@@ -235,7 +235,7 @@ const ProfileCardComponent = ({
       initialX,
       initialY,
       card,
-      wrap
+      wrap,
     );
 
     return () => {
@@ -261,11 +261,11 @@ const ProfileCardComponent = ({
       "--icon": iconUrl ? `url(${iconUrl})` : "none",
       "--grain": grainUrl ? `url(${grainUrl})` : "none",
       "--behind-gradient": showBehindGradient
-        ? behindGradient ?? DEFAULT_BEHIND_GRADIENT
+        ? (behindGradient ?? DEFAULT_BEHIND_GRADIENT)
         : "none",
       "--inner-gradient": innerGradient ?? DEFAULT_INNER_GRADIENT,
     }),
-    [iconUrl, grainUrl, showBehindGradient, behindGradient, innerGradient]
+    [iconUrl, grainUrl, showBehindGradient, behindGradient, innerGradient],
   );
 
   const handleContactClick = useCallback(() => {
@@ -315,6 +315,7 @@ const ProfileCardComponent = ({
                 </div>
                 <a
                   href="#contact"
+                  onClick={handleContactClick}
                   className="pc-contact-btn"
                   style={{ pointerEvents: "auto" }}
                   type="button"
